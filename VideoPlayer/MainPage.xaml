@@ -2,8 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:video="clr-namespace:Xam.Forms.VideoPlayer;assembly=Xam.Forms.VideoPlayer"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              NavigationPage.HasNavigationBar="False"
-             x:Class="VideoPlayer.MainPage">
+             x:Class="VideoPlayer.MainPage"
+             ios:Page.UseSafeArea="true">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="BackColor">Black</Color>
@@ -18,6 +20,8 @@
                 BufferingStart="VideoPlayer_BufferingStart"
                 BufferingEnd="VideoPlayer_BufferingEnd"
                 HeightRequest="200"/>
+            <Label FontSize="Large" Text="Video Title"/>
+            <Label FontSize="Body" Text="This is a sample description"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
