@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:video="clr-namespace:Xam.Forms.VideoPlayer;assembly=Xam.Forms.VideoPlayer"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="VideoPlayer.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="BackColor">Black</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <video:VideoPlayer Grid.Row="0" x:Name="videoPlayer"
+                BackgroundColor="{StaticResource BackColor}"
+                PlayCompletion="VideoPlayer_PlayCompletion" 
+                PlayError="VideoPlayer_PlayError"
+                BufferingStart="VideoPlayer_BufferingStart"
+                BufferingEnd="VideoPlayer_BufferingEnd"
+                HeightRequest="200"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
